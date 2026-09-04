@@ -2,6 +2,10 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
+<p align="center">
+  <img src="docs/rsi-logo.png" width="180" alt="RSI Skill logo">
+</p>
+
 A user-governed experience loop for coding agents. After a task, RSI can propose reusable lessons and preferences, save only the items you approve, retrieve them for similar work, let you browse or remove them, and promote mature lessons into a standalone skill.
 
 > Every saved lesson and generated skill stays visible, reviewable, and controlled by the user.

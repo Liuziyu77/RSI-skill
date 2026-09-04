@@ -2,6 +2,10 @@
 
 [English](README.md) | **简体中文**
 
+<p align="center">
+  <img src="docs/rsi-logo.png" width="180" alt="RSI Skill 标志">
+</p>
+
 一个由用户显式启动、由用户逐条审批的 Agent 经验闭环：任务完成后提炼经验，可视化管理已经保存的内容，在后续同类任务中召回经验，并把成熟经验晋升为新的 Skill。
 
 > 每条保存的经验和生成的 Skill 都保持可见、可审查，并由用户控制。
