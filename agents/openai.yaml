@@ -1,0 +1,6 @@
+interface:
+  display_name: "RSI Experience Loop"
+  short_description: "Review, browse, and reuse approved experience"
+  default_prompt: "Use $rsi to review this task or show and manage my saved experience."
+policy:
+  allow_implicit_invocation: false

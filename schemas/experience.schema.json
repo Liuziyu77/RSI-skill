@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/rsi/experience.schema.json",
+  "title": "RSI approved experience candidate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "title",
+    "lesson",
+    "scope",
+    "task_types",
+    "applicability",
+    "evidence",
+    "confidence",
+    "tags"
+  ],
+  "properties": {
+    "kind": {
+      "enum": ["preference", "procedure", "pitfall", "constraint", "decision", "tooling"]
+    },
+    "title": {"type": "string", "minLength": 3, "maxLength": 120},
+    "lesson": {"type": "string", "minLength": 8, "maxLength": 4000},
+    "scope": {"type": "string", "minLength": 1, "maxLength": 160},
+    "task_types": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 20,
+      "items": {"type": "string", "minLength": 1, "maxLength": 80},
+      "uniqueItems": true
+    },
+    "applicability": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 20,
+      "items": {"type": "string", "minLength": 1, "maxLength": 240}
+    },
+    "evidence": {"type": "string", "minLength": 3, "maxLength": 2000},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "tags": {
+      "type": "array",
+      "maxItems": 30,
+      "items": {"type": "string", "minLength": 1, "maxLength": 80},
+      "uniqueItems": true
+    },
+    "avoid": {"type": "string", "maxLength": 2000},
+    "source_task": {"type": "string", "maxLength": 200}
+  }
+}

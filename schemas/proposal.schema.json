@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/rsi/proposal.schema.json",
+  "title": "RSI user-review proposal",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["proposal_id", "action", "destination", "summary", "scope", "evidence", "confidence"],
+  "properties": {
+    "proposal_id": {"type": "string", "pattern": "^[MESADU][1-9][0-9]*$"},
+    "action": {"enum": ["save", "create", "archive", "delete-to-trash", "restore"]},
+    "destination": {"enum": ["memory", "experience", "skill", "trash"]},
+    "summary": {"type": "string", "minLength": 3, "maxLength": 4000},
+    "scope": {"type": "string", "minLength": 1, "maxLength": 160},
+    "evidence": {"type": "string", "minLength": 3, "maxLength": 2000},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "risks": {
+      "type": "array",
+      "items": {"type": "string", "maxLength": 500}
+    },
+    "payload": {"type": "object"}
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "benchmark_type": "synthetic intended-record retrieval; not end-to-end task quality",
+  "bootstrap_iterations": 10000,
+  "bootstrap_seed": 20260904,
+  "dataset": "experiments/fixtures/retrieval_cases.json",
+  "generated_at": "2026-09-04T08:00:53Z",
+  "metrics": {
+    "lesson_only_overlap": {
+      "mrr": 0.975,
+      "recall_at_1": 0.95,
+      "recall_at_3": 1.0
+    },
+    "no_recall": {
+      "mrr": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_3": 0.0
+    },
+    "recency_top3": {
+      "mrr": 0.09166666666666666,
+      "recall_at_1": 0.05,
+      "recall_at_3": 0.15
+    },
+    "rsi_structured": {
+      "mrr": 1.0,
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0
+    }
+  },
+  "queries": 20,
+  "records": 20,
+  "rsi_minus_recency_recall_at_3_95pct_paired_bootstrap": [
+    0.7,
+    1.0
+  ]
+}
